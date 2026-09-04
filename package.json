@@ -1,0 +1,28 @@
+{
+  "name": "deliveroo-agent-final",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "BDI + LLM + PDDL agents for the Deliveroo.js Autonomous Software Agents exam project.",
+  "scripts": {
+    "dev:a": "tsx src/bdi/agentA.ts",
+    "dev:b": "tsx src/llm/agentB.ts",
+    "dev:team": "tsx src/scripts/run-team.ts",
+    "build": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "planner:setup": "python3 -m venv .venv && .venv/bin/python -m pip install --upgrade pip pyperplan",
+    "benchmark:maps": "node scripts/benchmark-maps.mjs"
+  },
+  "dependencies": {
+    "@unitn-asa/deliveroo-js-sdk": "^1.0.0",
+    "dotenv": "^17.2.3",
+    "zod": "^4.1.13"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.14"
+  }
+}
